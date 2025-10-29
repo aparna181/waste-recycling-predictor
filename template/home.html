@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1 class="main-title">Waste Management Analytics & Predictor</h1>
+<p class="subtitle">Advanced AI-powered insights for sustainable waste management</p>
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="metric-card">
+            <h3>Cities</h3>
+            <h2>{{ unique_cities }}</h2>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="metric-card">
+            <h3>Records</h3>
+            <h2>{{ total_records }}</h2>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="metric-card">
+            <h3>Avg Recycling Rate</h3>
+            <h2>{{ "%.1f"|format(avg_recycling_rate) }}%</h2>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="metric-card">
+            <h3>Years</h3>
+            <h2>{{ unique_years }}</h2>
+        </div>
+    </div>
+</div>
+
+<h2 class="mt-5">Key Features</h2>
+<div class="row">
+    <div class="col-md-6">
+        <ul>
+            <li><strong>AI Prediction</strong>: Advanced CatBoost model for recycling rate prediction</li>
+            <li><strong>Data Analytics</strong>: Comprehensive waste management insights</li>
+            <li><strong>Geographic Visualization</strong>: Interactive maps and regional analysis</li>
+            <li><strong>Trend Analysis</strong>: Historical patterns and future projections</li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <ul>
+            <li><strong>Multi-City Support</strong>: Mumbai, Delhi, Bengaluru, Kolkata, Chennai</li>
+            <li><strong>Waste Type Analysis</strong>: Plastic, Organic, E-Waste, Construction, Hazardous</li>
+            <li><strong>Municipal Insights</strong>: Efficiency scoring and cost analysis</li>
+            <li><strong>User-Friendly Interface</strong>: Intuitive design for all users</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_91ab9dda40d43bea035477a20dd553b8 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_91ab9dda40d43bea035477a20dd553b8" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_91ab9dda40d43bea035477a20dd553b8 = L.map(
+                "map_91ab9dda40d43bea035477a20dd553b8",
+                {
+                    center: [21.67186176470588, 83.63824117647059],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_762164df9be85c8b8ab41154939f3bc1 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+            var circle_marker_b2a8b81fac636ec302f663324835e89c = L.circleMarker(
+                [32.4069, 92.1176],
+                {"bubblingMouseEvents": true, "color": "#98d486", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#98d486", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_0a538936add8d86f9f737fc086585f04 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_478512ac42dab4be6111d3bc50035ba6 = $(`<div id="html_478512ac42dab4be6111d3bc50035ba6" style="width: 100.0%; height: 100.0%;">Agra Landfill: 57.24%</div>`)[0];
+                popup_0a538936add8d86f9f737fc086585f04.setContent(html_478512ac42dab4be6111d3bc50035ba6);
+            
+        
+
+        circle_marker_b2a8b81fac636ec302f663324835e89c.bindPopup(popup_0a538936add8d86f9f737fc086585f04)
+        ;
+
+        
+    
+    
+            var circle_marker_9a684e22e7735999dcb9d20b0dfbf581 = L.circleMarker(
+                [19.3868, 72.7845],
+                {"bubblingMouseEvents": true, "color": "#258745", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#258745", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_f2d52f398bfa5b04454f4cb4488aad05 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_21f7a4ac0e04e4ae6a70c7327ee5e04d = $(`<div id="html_21f7a4ac0e04e4ae6a70c7327ee5e04d" style="width: 100.0%; height: 100.0%;">Ahmedabad Landfill: 61.32%</div>`)[0];
+                popup_f2d52f398bfa5b04454f4cb4488aad05.setContent(html_21f7a4ac0e04e4ae6a70c7327ee5e04d);
+            
+        
+
+        circle_marker_9a684e22e7735999dcb9d20b0dfbf581.bindPopup(popup_f2d52f398bfa5b04454f4cb4488aad05)
+        ;
+
+        
+    
+    
+            var circle_marker_1f35a0fbdea5221e61b450fcb924c260 = L.circleMarker(
+                [35.9642, 87.6951],
+                {"bubblingMouseEvents": true, "color": "#d5eea1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d5eea1", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_61f53ca719ad97ceb3cfc009a0cbddb5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_45cf24ab1acb3e7abb7ad1c224a3bbb8 = $(`<div id="html_45cf24ab1acb3e7abb7ad1c224a3bbb8" style="width: 100.0%; height: 100.0%;">Allahabad Landfill: 55.24%</div>`)[0];
+                popup_61f53ca719ad97ceb3cfc009a0cbddb5.setContent(html_45cf24ab1acb3e7abb7ad1c224a3bbb8);
+            
+        
+
+        circle_marker_1f35a0fbdea5221e61b450fcb924c260.bindPopup(popup_61f53ca719ad97ceb3cfc009a0cbddb5)
+        ;
+
+        
+    
+    
+            var circle_marker_d818ca733d987a3e08cb451cf66f6272 = L.circleMarker(
+                [22.6059, 88.4682],
+                {"bubblingMouseEvents": true, "color": "#f5fbb8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f5fbb8", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_3aad52d50ca400f9059e2baec3227e56 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_16d1d7f144b4aabedfc83b00341ab15a = $(`<div id="html_16d1d7f144b4aabedfc83b00341ab15a" style="width: 100.0%; height: 100.0%;">Amritsar Landfill: 53.56%</div>`)[0];
+                popup_3aad52d50ca400f9059e2baec3227e56.setContent(html_16d1d7f144b4aabedfc83b00341ab15a);
+            
+        
+
+        circle_marker_d818ca733d987a3e08cb451cf66f6272.bindPopup(popup_3aad52d50ca400f9059e2baec3227e56)
+        ;
+
+        
+    
+    
+            var circle_marker_c1811dfce638bcd7bc2b62d3a49b9c78 = L.circleMarker(
+                [15.7581, 85.4837],
+                {"bubblingMouseEvents": true, "color": "#b6e192", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b6e192", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_eba210acc735857a0816e65435812095 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d9c9d81549f13c11cfaa13adfc00bd73 = $(`<div id="html_d9c9d81549f13c11cfaa13adfc00bd73" style="width: 100.0%; height: 100.0%;">Bengaluru Landfill: 56.32%</div>`)[0];
+                popup_eba210acc735857a0816e65435812095.setContent(html_d9c9d81549f13c11cfaa13adfc00bd73);
+            
+        
+
+        circle_marker_c1811dfce638bcd7bc2b62d3a49b9c78.bindPopup(popup_eba210acc735857a0816e65435812095)
+        ;
+
+        
+    
+    
+            var circle_marker_f9e36f311950c0b2e550b523b0d9fe62 = L.circleMarker(
+                [18.3203, 75.8314],
+                {"bubblingMouseEvents": true, "color": "#e5f5ac", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e5f5ac", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_35228315e0a05ead324e8351357e3af3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7080d52e07e1df8ac29ad627b05ef612 = $(`<div id="html_7080d52e07e1df8ac29ad627b05ef612" style="width: 100.0%; height: 100.0%;">Bhopal Landfill: 54.44%</div>`)[0];
+                popup_35228315e0a05ead324e8351357e3af3.setContent(html_7080d52e07e1df8ac29ad627b05ef612);
+            
+        
+
+        circle_marker_f9e36f311950c0b2e550b523b0d9fe62.bindPopup(popup_35228315e0a05ead324e8351357e3af3)
+        ;
+
+        
+    
+    
+            var circle_marker_936c3f1738d46ae767a238e22261b229 = L.circleMarker(
+                [29.4633, 80.8873],
+                {"bubblingMouseEvents": true, "color": "#a4d98a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a4d98a", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_5d0c6737dc6daf335bdeaf47974c2ca5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f2743ed813f612ff78755a3cd4b02fc1 = $(`<div id="html_f2743ed813f612ff78755a3cd4b02fc1" style="width: 100.0%; height: 100.0%;">Chennai Landfill: 56.92%</div>`)[0];
+                popup_5d0c6737dc6daf335bdeaf47974c2ca5.setContent(html_f2743ed813f612ff78755a3cd4b02fc1);
+            
+        
+
+        circle_marker_936c3f1738d46ae767a238e22261b229.bindPopup(popup_5d0c6737dc6daf335bdeaf47974c2ca5)
+        ;
+
+        
+    
+    
+            var circle_marker_8cd82dd79da780c7649e43741854d7d8 = L.circleMarker(
+                [31.9729, 76.5516],
+                {"bubblingMouseEvents": true, "color": "#c4e799", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c4e799", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_8e15bcdd29334bed38517b33b4bf394e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9016a07847b551b7b54d48440f39a929 = $(`<div id="html_9016a07847b551b7b54d48440f39a929" style="width: 100.0%; height: 100.0%;">Coimbatore Landfill: 55.80%</div>`)[0];
+                popup_8e15bcdd29334bed38517b33b4bf394e.setContent(html_9016a07847b551b7b54d48440f39a929);
+            
+        
+
+        circle_marker_8cd82dd79da780c7649e43741854d7d8.bindPopup(popup_8e15bcdd29334bed38517b33b4bf394e)
+        ;
+
+        
+    
+    
+            var circle_marker_65ae2d8368aab9db199790ba6e4a0edc = L.circleMarker(
+                [30.2591, 91.9376],
+                {"bubblingMouseEvents": true, "color": "#42ab5d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#42ab5d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_899651c5351a74e8a726fb5b61a4172b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3803bb81bb0d77b7640b2276fdbee656 = $(`<div id="html_3803bb81bb0d77b7640b2276fdbee656" style="width: 100.0%; height: 100.0%;">Delhi Landfill: 59.80%</div>`)[0];
+                popup_899651c5351a74e8a726fb5b61a4172b.setContent(html_3803bb81bb0d77b7640b2276fdbee656);
+            
+        
+
+        circle_marker_65ae2d8368aab9db199790ba6e4a0edc.bindPopup(popup_899651c5351a74e8a726fb5b61a4172b)
+        ;
+
+        
+    
+    
+            var circle_marker_616cb6b15742f442c36e5a548d417ebb = L.circleMarker(
+                [19.7894, 85.8429],
+                {"bubblingMouseEvents": true, "color": "#2e924c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e924c", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_4f5ba14889ee3c99895acf36780c43d1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d5c4d9522ca473466d24c5116f747028 = $(`<div id="html_d5c4d9522ca473466d24c5116f747028" style="width: 100.0%; height: 100.0%;">Guwahati Landfill: 60.88%</div>`)[0];
+                popup_4f5ba14889ee3c99895acf36780c43d1.setContent(html_d5c4d9522ca473466d24c5116f747028);
+            
+        
+
+        circle_marker_616cb6b15742f442c36e5a548d417ebb.bindPopup(popup_4f5ba14889ee3c99895acf36780c43d1)
+        ;
+
+        
+    
+    
+            var circle_marker_5eba12fcba4f78516c369f2b47eb9ee6 = L.circleMarker(
+                [10.9566, 91.6565],
+                {"bubblingMouseEvents": true, "color": "#ffffe5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffe5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_dd301da49b679fa027f26224475ca060 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2c528c4cd6e4ffed0233e7edfadbce79 = $(`<div id="html_2c528c4cd6e4ffed0233e7edfadbce79" style="width: 100.0%; height: 100.0%;">Gwalior Landfill: 51.84%</div>`)[0];
+                popup_dd301da49b679fa027f26224475ca060.setContent(html_2c528c4cd6e4ffed0233e7edfadbce79);
+            
+        
+
+        circle_marker_5eba12fcba4f78516c369f2b47eb9ee6.bindPopup(popup_dd301da49b679fa027f26224475ca060)
+        ;
+
+        
+    
+    
+            var circle_marker_a8387752d5cb59b3e691ecf94a9bf889 = L.circleMarker(
+                [34.069, 82.1518],
+                {"bubblingMouseEvents": true, "color": "#a2d88a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a2d88a", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_0d2bc1203ea6ebf198f91716821c4b67 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f12b85a370f5f1dfdc50763db81ff1ea = $(`<div id="html_f12b85a370f5f1dfdc50763db81ff1ea" style="width: 100.0%; height: 100.0%;">Hyderabad Landfill: 56.96%</div>`)[0];
+                popup_0d2bc1203ea6ebf198f91716821c4b67.setContent(html_f12b85a370f5f1dfdc50763db81ff1ea);
+            
+        
+
+        circle_marker_a8387752d5cb59b3e691ecf94a9bf889.bindPopup(popup_0d2bc1203ea6ebf198f91716821c4b67)
+        ;
+
+        
+    
+    
+            var circle_marker_bc158786ee21deb8803ea53220f226d3 = L.circleMarker(
+                [24.6237, 95.1044],
+                {"bubblingMouseEvents": true, "color": "#004529", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#004529", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_a6aaa5f5d82565141f3c0f939c003a21 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_df0baf62a568b05833a6bbf1cd76c0d4 = $(`<div id="html_df0baf62a568b05833a6bbf1cd76c0d4" style="width: 100.0%; height: 100.0%;">Indore Landfill: 64.64%</div>`)[0];
+                popup_a6aaa5f5d82565141f3c0f939c003a21.setContent(html_df0baf62a568b05833a6bbf1cd76c0d4);
+            
+        
+
+        circle_marker_bc158786ee21deb8803ea53220f226d3.bindPopup(popup_a6aaa5f5d82565141f3c0f939c003a21)
+        ;
+
+        
+    
+    
+            var circle_marker_af4ae56790378fee7f3e1609d4a40337 = L.circleMarker(
+                [20.0639, 89.516],
+                {"bubblingMouseEvents": true, "color": "#2d914b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d914b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_781d8effcc3f6fe0c27244c6e28a7513 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_523d9b78f7f8a6dc5e124c8ff7e2506f = $(`<div id="html_523d9b78f7f8a6dc5e124c8ff7e2506f" style="width: 100.0%; height: 100.0%;">Jabalpur Landfill: 60.92%</div>`)[0];
+                popup_781d8effcc3f6fe0c27244c6e28a7513.setContent(html_523d9b78f7f8a6dc5e124c8ff7e2506f);
+            
+        
+
+        circle_marker_af4ae56790378fee7f3e1609d4a40337.bindPopup(popup_781d8effcc3f6fe0c27244c6e28a7513)
+        ;
+
+        
+    
+    
+            var circle_marker_1b430ab0bb1c196ca9f2ac61975965ea = L.circleMarker(
+                [11.6909, 94.4267],
+                {"bubblingMouseEvents": true, "color": "#74c477", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#74c477", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_84b6947e9db4e0f20249b3aa99552a53 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2d027f4426a37e546ef3107b79c0a078 = $(`<div id="html_2d027f4426a37e546ef3107b79c0a078" style="width: 100.0%; height: 100.0%;">Jaipur Landfill: 58.36%</div>`)[0];
+                popup_84b6947e9db4e0f20249b3aa99552a53.setContent(html_2d027f4426a37e546ef3107b79c0a078);
+            
+        
+
+        circle_marker_1b430ab0bb1c196ca9f2ac61975965ea.bindPopup(popup_84b6947e9db4e0f20249b3aa99552a53)
+        ;
+
+        
+    
+    
+            var circle_marker_e6c440102a67cb1fcdd62a3d32577c7b = L.circleMarker(
+                [8.9824, 77.0472],
+                {"bubblingMouseEvents": true, "color": "#f3fab6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f3fab6", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_e12900e29e189143f8099fc1128bec66 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_33d5fa6c275ef9e99aa6d47bbb420401 = $(`<div id="html_33d5fa6c275ef9e99aa6d47bbb420401" style="width: 100.0%; height: 100.0%;">Jodhpur Landfill: 53.68%</div>`)[0];
+                popup_e12900e29e189143f8099fc1128bec66.setContent(html_33d5fa6c275ef9e99aa6d47bbb420401);
+            
+        
+
+        circle_marker_e6c440102a67cb1fcdd62a3d32577c7b.bindPopup(popup_e12900e29e189143f8099fc1128bec66)
+        ;
+
+        
+    
+    
+            var circle_marker_d72f8069230fd58283ab8e0ce1dc43a7 = L.circleMarker(
+                [13.0189, 89.182],
+                {"bubblingMouseEvents": true, "color": "#fbfed2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fbfed2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_761085accf1d17e264a1c95a424bdbbd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_37dfe3539008b86cee656e6fa7d0ce64 = $(`<div id="html_37dfe3539008b86cee656e6fa7d0ce64" style="width: 100.0%; height: 100.0%;">Kanpur Landfill: 52.56%</div>`)[0];
+                popup_761085accf1d17e264a1c95a424bdbbd.setContent(html_37dfe3539008b86cee656e6fa7d0ce64);
+            
+        
+
+        circle_marker_d72f8069230fd58283ab8e0ce1dc43a7.bindPopup(popup_761085accf1d17e264a1c95a424bdbbd)
+        ;
+
+        
+    
+    
+            var circle_marker_09b6c9257240a640a51e425b14a76bd4 = L.circleMarker(
+                [16.068, 72.6096],
+                {"bubblingMouseEvents": true, "color": "#77c679", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#77c679", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_71fc2b63476ccd61ef95f6ce0c4c6aba = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9ca0c2d840f0eddfeb44c066411a9945 = $(`<div id="html_9ca0c2d840f0eddfeb44c066411a9945" style="width: 100.0%; height: 100.0%;">Kolkata Landfill: 58.28%</div>`)[0];
+                popup_71fc2b63476ccd61ef95f6ce0c4c6aba.setContent(html_9ca0c2d840f0eddfeb44c066411a9945);
+            
+        
+
+        circle_marker_09b6c9257240a640a51e425b14a76bd4.bindPopup(popup_71fc2b63476ccd61ef95f6ce0c4c6aba)
+        ;
+
+        
+    
+    
+            var circle_marker_a0b08d1935789c365e3c31b1983af50e = L.circleMarker(
+                [10.3904, 81.8808],
+                {"bubblingMouseEvents": true, "color": "#e3f4aa", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e3f4aa", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_a74b28c6d3abca0f04960ca11870913e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a1e4ea77c7b4386efa304b17bb91ada8 = $(`<div id="html_a1e4ea77c7b4386efa304b17bb91ada8" style="width: 100.0%; height: 100.0%;">Lucknow Landfill: 54.52%</div>`)[0];
+                popup_a74b28c6d3abca0f04960ca11870913e.setContent(html_a1e4ea77c7b4386efa304b17bb91ada8);
+            
+        
+
+        circle_marker_a0b08d1935789c365e3c31b1983af50e.bindPopup(popup_a74b28c6d3abca0f04960ca11870913e)
+        ;
+
+        
+    
+    
+            var circle_marker_13298034a2060115b714d9c9ed575e6a = L.circleMarker(
+                [10.3062, 77.427],
+                {"bubblingMouseEvents": true, "color": "#75c578", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#75c578", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_62d360fe078843390bd58f781ed0ae70 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2a5da3f56b254eabf5d47de396c1784b = $(`<div id="html_2a5da3f56b254eabf5d47de396c1784b" style="width: 100.0%; height: 100.0%;">Ludhiana Landfill: 58.32%</div>`)[0];
+                popup_62d360fe078843390bd58f781ed0ae70.setContent(html_2a5da3f56b254eabf5d47de396c1784b);
+            
+        
+
+        circle_marker_13298034a2060115b714d9c9ed575e6a.bindPopup(popup_62d360fe078843390bd58f781ed0ae70)
+        ;
+
+        
+    
+    
+            var circle_marker_84070a21cc37f73602d0aa4dca39671b = L.circleMarker(
+                [13.1884, 95.8263],
+                {"bubblingMouseEvents": true, "color": "#bae394", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bae394", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_15fe08ca9ae686d031b21d1c587eef13 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1be18959fb26f1f8dbd319f1f6add56c = $(`<div id="html_1be18959fb26f1f8dbd319f1f6add56c" style="width: 100.0%; height: 100.0%;">Madurai Landfill: 56.16%</div>`)[0];
+                popup_15fe08ca9ae686d031b21d1c587eef13.setContent(html_1be18959fb26f1f8dbd319f1f6add56c);
+            
+        
+
+        circle_marker_84070a21cc37f73602d0aa4dca39671b.bindPopup(popup_15fe08ca9ae686d031b21d1c587eef13)
+        ;
+
+        
+    
+    
+            var circle_marker_435b69bd265e2642147b281d138705f2 = L.circleMarker(
+                [14.3552, 72.9863],
+                {"bubblingMouseEvents": true, "color": "#3aa257", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3aa257", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_680d86e43d9a08b9d92350ff5d6eb265 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_354e0de44a976a7c4c7bf9661d68000f = $(`<div id="html_354e0de44a976a7c4c7bf9661d68000f" style="width: 100.0%; height: 100.0%;">Meerut Landfill: 60.20%</div>`)[0];
+                popup_680d86e43d9a08b9d92350ff5d6eb265.setContent(html_354e0de44a976a7c4c7bf9661d68000f);
+            
+        
+
+        circle_marker_435b69bd265e2642147b281d138705f2.bindPopup(popup_680d86e43d9a08b9d92350ff5d6eb265)
+        ;
+
+        
+    
+    
+            var circle_marker_63a51c7a10dd0bfa1afe98eeb6e1a15a = L.circleMarker(
+                [22.4265, 77.4931],
+                {"bubblingMouseEvents": true, "color": "#a6da8b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a6da8b", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_56e6f7e979debeb21e7aea3da48f0765 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e2de39e7154600805163f0124d0404bf = $(`<div id="html_e2de39e7154600805163f0124d0404bf" style="width: 100.0%; height: 100.0%;">Mumbai Landfill: 56.84%</div>`)[0];
+                popup_56e6f7e979debeb21e7aea3da48f0765.setContent(html_e2de39e7154600805163f0124d0404bf);
+            
+        
+
+        circle_marker_63a51c7a10dd0bfa1afe98eeb6e1a15a.bindPopup(popup_56e6f7e979debeb21e7aea3da48f0765)
+        ;
+
+        
+    
+    
+            var circle_marker_55facf185ce05fac222f8b665e4de71a = L.circleMarker(
+                [35.7049, 71.8706],
+                {"bubblingMouseEvents": true, "color": "#e9f6af", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e9f6af", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_5a965287d977ee189eaaf49e27f68194 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7094872f90a645d002146a07be1b2558 = $(`<div id="html_7094872f90a645d002146a07be1b2558" style="width: 100.0%; height: 100.0%;">Nagpur Landfill: 54.20%</div>`)[0];
+                popup_5a965287d977ee189eaaf49e27f68194.setContent(html_7094872f90a645d002146a07be1b2558);
+            
+        
+
+        circle_marker_55facf185ce05fac222f8b665e4de71a.bindPopup(popup_5a965287d977ee189eaaf49e27f68194)
+        ;
+
+        
+    
+    
+            var circle_marker_a8352e350c6252ca8807dab9c49ee600 = L.circleMarker(
+                [14.6177, 91.4568],
+                {"bubblingMouseEvents": true, "color": "#afde8f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#afde8f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_a2c82d357eb5796f8ea9c68c402ddd8c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_288106e6d85e2f7f319be4fa36db3a27 = $(`<div id="html_288106e6d85e2f7f319be4fa36db3a27" style="width: 100.0%; height: 100.0%;">Nashik Landfill: 56.56%</div>`)[0];
+                popup_a2c82d357eb5796f8ea9c68c402ddd8c.setContent(html_288106e6d85e2f7f319be4fa36db3a27);
+            
+        
+
+        circle_marker_a8352e350c6252ca8807dab9c49ee600.bindPopup(popup_a2c82d357eb5796f8ea9c68c402ddd8c)
+        ;
+
+        
+    
+    
+            var circle_marker_d39cf565c14ad5c6a90edcd1ca59ef83 = L.circleMarker(
+                [18.5496, 94.8411],
+                {"bubblingMouseEvents": true, "color": "#d7efa2", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d7efa2", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_b6787c51e68d5e4249fb1a77fb81e025 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8ca386f05eefd2a29d5d92d5fd334ef7 = $(`<div id="html_8ca386f05eefd2a29d5d92d5fd334ef7" style="width: 100.0%; height: 100.0%;">Patna Landfill: 55.12%</div>`)[0];
+                popup_b6787c51e68d5e4249fb1a77fb81e025.setContent(html_8ca386f05eefd2a29d5d92d5fd334ef7);
+            
+        
+
+        circle_marker_d39cf565c14ad5c6a90edcd1ca59ef83.bindPopup(popup_b6787c51e68d5e4249fb1a77fb81e025)
+        ;
+
+        
+    
+    
+            var circle_marker_3e57bc4e5150daaf73ab55149569c1a6 = L.circleMarker(
+                [28.7237, 84.2278],
+                {"bubblingMouseEvents": true, "color": "#eff9b3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eff9b3", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_e1a2e8164df2be9e0bcc1da3159315cf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1ca3dc2b91b9e96088b572750cd1eb6a = $(`<div id="html_1ca3dc2b91b9e96088b572750cd1eb6a" style="width: 100.0%; height: 100.0%;">Pune Landfill: 53.88%</div>`)[0];
+                popup_e1a2e8164df2be9e0bcc1da3159315cf.setContent(html_1ca3dc2b91b9e96088b572750cd1eb6a);
+            
+        
+
+        circle_marker_3e57bc4e5150daaf73ab55149569c1a6.bindPopup(popup_e1a2e8164df2be9e0bcc1da3159315cf)
+        ;
+
+        
+    
+    
+            var circle_marker_480cc2d4afc0a313d1fbb73022eb1836 = L.circleMarker(
+                [30.6193, 68.7432],
+                {"bubblingMouseEvents": true, "color": "#72c376", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#72c376", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_a5716adc9ae8e18c68dad864ff3ce339 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_153fbd454335532dcaa132aae77dc856 = $(`<div id="html_153fbd454335532dcaa132aae77dc856" style="width: 100.0%; height: 100.0%;">Rajkot Landfill: 58.44%</div>`)[0];
+                popup_a5716adc9ae8e18c68dad864ff3ce339.setContent(html_153fbd454335532dcaa132aae77dc856);
+            
+        
+
+        circle_marker_480cc2d4afc0a313d1fbb73022eb1836.bindPopup(popup_a5716adc9ae8e18c68dad864ff3ce339)
+        ;
+
+        
+    
+    
+            var circle_marker_bb3510fdc578fe9c6a142b29d72f5fb7 = L.circleMarker(
+                [13.4978, 84.8338],
+                {"bubblingMouseEvents": true, "color": "#79c679", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#79c679", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_f779c6df0b1f85f0631be30e660fd31d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ee8b4293fbfa2c7afae00951ab677ac3 = $(`<div id="html_ee8b4293fbfa2c7afae00951ab677ac3" style="width: 100.0%; height: 100.0%;">Ranchi Landfill: 58.20%</div>`)[0];
+                popup_f779c6df0b1f85f0631be30e660fd31d.setContent(html_ee8b4293fbfa2c7afae00951ab677ac3);
+            
+        
+
+        circle_marker_bb3510fdc578fe9c6a142b29d72f5fb7.bindPopup(popup_f779c6df0b1f85f0631be30e660fd31d)
+        ;
+
+        
+    
+    
+            var circle_marker_ef2ca8f3ff13b05206bf88e25962fca1 = L.circleMarker(
+                [32.805, 89.0238],
+                {"bubblingMouseEvents": true, "color": "#bee596", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bee596", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_b338b641605a1bc11c603e6d7bd13928 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6ea3778975d93698b92a5863abce8815 = $(`<div id="html_6ea3778975d93698b92a5863abce8815" style="width: 100.0%; height: 100.0%;">Surat Landfill: 56.00%</div>`)[0];
+                popup_b338b641605a1bc11c603e6d7bd13928.setContent(html_6ea3778975d93698b92a5863abce8815);
+            
+        
+
+        circle_marker_ef2ca8f3ff13b05206bf88e25962fca1.bindPopup(popup_b338b641605a1bc11c603e6d7bd13928)
+        ;
+
+        
+    
+    
+            var circle_marker_7b0a1ee49ee6f941257bcf5cfc4fe79c = L.circleMarker(
+                [17.2935, 83.4447],
+                {"bubblingMouseEvents": true, "color": "#58b669", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#58b669", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_cebf98a893d6a5626e0a62a8632488f3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_85e02bebb1f0f10ed7d1613ca069c1ad = $(`<div id="html_85e02bebb1f0f10ed7d1613ca069c1ad" style="width: 100.0%; height: 100.0%;">Thiruvananthapuram Landfill: 59.16%</div>`)[0];
+                popup_cebf98a893d6a5626e0a62a8632488f3.setContent(html_85e02bebb1f0f10ed7d1613ca069c1ad);
+            
+        
+
+        circle_marker_7b0a1ee49ee6f941257bcf5cfc4fe79c.bindPopup(popup_cebf98a893d6a5626e0a62a8632488f3)
+        ;
+
+        
+    
+    
+            var circle_marker_26675b0d4780e9b2138f986d0c799081 = L.circleMarker(
+                [31.3853, 71.6585],
+                {"bubblingMouseEvents": true, "color": "#fbfdcf", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fbfdcf", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_0265d3e7d6438c7a41cebd6b87c71669 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e5d40d6d951cbce0c1396ef3aa17fce6 = $(`<div id="html_e5d40d6d951cbce0c1396ef3aa17fce6" style="width: 100.0%; height: 100.0%;">Vadodara Landfill: 52.68%</div>`)[0];
+                popup_0265d3e7d6438c7a41cebd6b87c71669.setContent(html_e5d40d6d951cbce0c1396ef3aa17fce6);
+            
+        
+
+        circle_marker_26675b0d4780e9b2138f986d0c799081.bindPopup(popup_0265d3e7d6438c7a41cebd6b87c71669)
+        ;
+
+        
+    
+    
+            var circle_marker_dca1fa8349651551a4b410fc0bcfc85f = L.circleMarker(
+                [35.156, 83.0516],
+                {"bubblingMouseEvents": true, "color": "#187b3f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#187b3f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_cfeb1d93ce083f53058a00163aa66389 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_31e2908550fc25b157eaa0c7971e8d0a = $(`<div id="html_31e2908550fc25b157eaa0c7971e8d0a" style="width: 100.0%; height: 100.0%;">Varanasi Landfill: 61.92%</div>`)[0];
+                popup_cfeb1d93ce083f53058a00163aa66389.setContent(html_31e2908550fc25b157eaa0c7971e8d0a);
+            
+        
+
+        circle_marker_dca1fa8349651551a4b410fc0bcfc85f.bindPopup(popup_cfeb1d93ce083f53058a00163aa66389)
+        ;
+
+        
+    
+    
+            var circle_marker_54a6c41d509de29f18fdeabfbedef573 = L.circleMarker(
+                [12.4235, 85.6407],
+                {"bubblingMouseEvents": true, "color": "#49af61", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#49af61", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_91ab9dda40d43bea035477a20dd553b8);
+        
+    
+        var popup_835ca279a135a90f4cb52458f971fe6e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_68bb6353c4f2e07c9cbcb4e2cc3ab75f = $(`<div id="html_68bb6353c4f2e07c9cbcb4e2cc3ab75f" style="width: 100.0%; height: 100.0%;">Visakhapatnam Landfill: 59.64%</div>`)[0];
+                popup_835ca279a135a90f4cb52458f971fe6e.setContent(html_68bb6353c4f2e07c9cbcb4e2cc3ab75f);
+            
+        
+
+        circle_marker_54a6c41d509de29f18fdeabfbedef573.bindPopup(popup_835ca279a135a90f4cb52458f971fe6e)
+        ;
+
+        
+    
+</script>
+</html>

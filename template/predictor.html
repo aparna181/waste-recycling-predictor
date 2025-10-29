@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1 class="main-title">Waste Recycling Rate Predictor</h1>
+<p class="subtitle">Enter waste management parameters to predict recycling rates</p>
+
+<form method="POST" action="{{ url_for('predictor') }}" class="stForm">
+    <h3 class="mb-4">Input Parameters</h3>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="city">City/District</label>
+                <select class="form-control" id="city" name="city">
+                    {% for option in city_options %}
+                    <option value="{{ option }}" {% if option == form_data.city %}selected{% endif %}>{{ option }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="waste_type">Waste Type</label>
+                <select class="form-control" id="waste_type" name="waste_type">
+                    {% for option in waste_type_options %}
+                    <option value="{{ option }}" {% if option == form_data.waste_type %}selected{% endif %}>{{ option }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="disposal_method">Disposal Method</label>
+                <select class="form-control" id="disposal_method" name="disposal_method">
+                    {% for option in disposal_options %}
+                    <option value="{{ option }}" {% if option == form_data.disposal_method %}selected{% endif %}>{{ option }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="waste_generated">Waste Generated (Tons/Day)</label>
+                <input type="number" class="form-control" id="waste_generated" name="waste_generated" step="0.1" value="{{ form_data.waste_generated|default(1000.0) }}">
+            </div>
+            <div class="form-group">
+                <label for="population_density">Population Density (People/km²)</label>
+                <input type="number" class="form-control" id="population_density" name="population_density" step="100" value="{{ form_data.population_density|default(10000) }}">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="municipal_efficiency">Municipal Efficiency Score (1-10)</label>
+                <input type="range" class="form-control-range" id="municipal_efficiency" name="municipal_efficiency" min="1" max="10" value="{{ form_data.municipal_efficiency|default(7) }}">
+                <span>Current Value: <span id="municipalEfficiencyValue">{{ form_data.municipal_efficiency|default(7) }}</span></span>
+            </div>
+            <div class="form-group">
+                <label for="cost_per_ton">Cost of Waste Management (₹/Ton)</label>
+                <input type="number" class="form-control" id="cost_per_ton" name="cost_per_ton" step="10.0" value="{{ form_data.cost_per_ton|default(2000.0) }}">
+            </div>
+            <div class="form-group">
+                <label for="awareness_campaigns">Awareness Campaigns Count</label>
+                <input type="number" class="form-control" id="awareness_campaigns" name="awareness_campaigns" step="1" value="{{ form_data.awareness_campaigns|default(10) }}">
+            </div>
+            <div class="form-group">
+                <label for="landfill_capacity">Landfill Capacity (Tons)</label>
+                <input type="number" class="form-control" id="landfill_capacity" name="landfill_capacity" step="100.0" value="{{ form_data.landfill_capacity|default(50000.0) }}">
+            </div>
+            <div class="form-group">
+                <label for="year">Year</label>
+                <input type="number" class="form-control" id="year" name="year" min="2010" max="2100" value="{{ form_data.year|default(2024) }}">
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <button type="submit" class="stButton btn btn-primary">Predict Recycling Rate</button>
+    </div>
+</form>
+
+{% if prediction is not none %}
+<div class="prediction-result mt-5">
+    <h2>🔮 Predicted Recycling Rate</h2>
+    <div class="prediction-value">{{ "%.2f"|format(prediction) }}%</div>
+    <div class="prediction-classification" style="font-size: 24px; font-weight: bold; margin: 10px 0;">
+        {% if status_color == 'success' %}🟢 HIGH{% endif %}
+        {% if status_color == 'warning' %}🟡 MEDIUM{% endif %}
+        {% if status_color == 'error' %}🔴 LOW{% endif %}
+    </div>
+    <p>Based on your input parameters and AI analysis</p>
+</div>
+<div class="alert alert-{{ status_color }} mt-3" role="alert">
+    {% if status_color == 'success' %}
+    <strong>Status: EXCELLENT</strong> - Recycling rate is in the HIGH range
+    {% endif %}
+    {% if status_color == 'warning' %}
+    <strong>Status: MODERATE</strong> - Recycling rate is in the MEDIUM range
+    {% endif %}
+    {% if status_color == 'error' %}
+    <strong>Status: POOR</strong> - Recycling rate is in the LOW range
+    {% endif %}
+</div>
+{% endif %}
+
+<script>
+    document.getElementById('municipal_efficiency').addEventListener('input', function(e) {
+        document.getElementById('municipalEfficiencyValue').innerText = e.target.value;
+    });
+</script>
+{% endblock %}

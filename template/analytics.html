@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1 class="main-title">Analytics Dashboard</h1>
+<p class="subtitle">Visual and statistical insights from the dataset</p>
+
+<h2 class="mt-4">Time Series Analysis</h2>
+<div class="plotly-chart">
+    {{ trends_plot|safe }}
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <h3 class="mt-4">Waste Type Analysis</h3>
+        <div class="plotly-chart">
+            {{ waste_plot|safe }}
+        </div>
+    </div>
+    <div class="col-md-6">
+        <h3 class="mt-4">Municipal Efficiency Impact</h3>
+        <div class="plotly-chart">
+            {{ efficiency_plot|safe }}
+        </div>
+    </div>
+</div>
+
+<h2 class="mt-4">Feature Correlations</h2>
+<div class="plotly-chart">
+    {{ corr_plot|safe }}
+</div>
+
+<h2 class="mt-4">Statistical Insights</h2>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card p-3">
+            <strong>Highest Recycling Rate:</strong> {{ metrics.highest_rate }}<br>
+            <strong>Lowest Recycling Rate:</strong> {{ metrics.lowest_rate }}
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card p-3">
+            <strong>Average Waste Generated:</strong> {{ metrics.avg_waste }}<br>
+            <strong>Total Awareness Campaigns:</strong> {{ metrics.total_campaigns }}
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card p-3">
+            <strong>Cost Range:</strong> {{ metrics.cost_range }}<br>
+            <strong>Population Density Range:</strong> {{ metrics.pop_density_range }}
+        </div>
+    </div>
+</div>
+{% endblock %}

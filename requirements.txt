@@ -1,0 +1,34 @@
+pandas==1.5.3
+numpy==1.23.5
+scikit-learn==1.2.2
+xgboost==1.7.5
+lightgbm==4.0.0
+catboost==1.2
+matplotlib==3.7.1
+seaborn==0.12.2
+folium==0.14.0
+plotly==5.14.1
+flask==2.3.2
+joblib==1.2.0
+shap==0.41.0
+lime==0.2.0.1
+optuna==3.1.0
+geopy==2.3.0
+streamlit==1.48.0
+# Additional modules for enhanced model training
+tqdm==4.64.0
+ipywidgets==8.0.0
+jupyter==1.0.0
+notebook==6.4.0
+# Feature selection and preprocessing
+scipy==1.9.0
+# Advanced visualization
+plotly-express==0.4.1
+# Data validation and type handling
+pyarrow==7.0.0
+# Enhanced model evaluation
+yellowbrick==1.4.0
+# Additional ML utilities
+imbalanced-learn==0.9.0
+# Streamlit deployment dependencies
+streamlit-folium==0.13.0

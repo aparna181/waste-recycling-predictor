@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1 class="main-title">About the Project</h1>
+<p class="subtitle">This page provides an overview of the project's goals and technology</p>
+    
+<h2 class="mt-4">Project Overview</h2>
+<p>This Waste Management Analytics & Predictor is an AI-powered application designed to help urban planners, municipal authorities, and environmental scientists make data-driven decisions about waste management strategies.</p>
+
+<h2 class="mt-4">Technical Details</h2>
+<ul>
+    <li><strong>Machine Learning Model</strong>: CatBoost Regressor with hyperparameter optimization</li>
+    <li><strong>Data Source</strong>: Historical waste management data from major Indian cities (2019-2023)</li>
+    <li><strong>Features</strong>: 19+ engineered features including waste types, municipal efficiency, landfill data</li>
+    <li><strong>Technology Stack</strong>: Python, Flask, Plotly, Pandas, NumPy, Joblib</li>
+</ul>
+
+<h2 class="mt-4">Key Features</h2>
+<ul>
+    <li><strong>Predictive Analytics</strong>: Forecast recycling rates based on various parameters</li>
+    <li><strong>Data Visualization</strong>: Interactive charts and geographic maps</li>
+    <li><strong>Trend Analysis</strong>: Historical patterns and future projections</li>
+    <li><strong>Multi-City Support</strong>: Analysis across different urban centers</li>
+</ul>
+
+<h2 class="mt-4">Architecture</h2>
+<p>The application follows a modular architecture:</p>
+<ul>
+    <li><strong>Data Layer</strong>: Processed waste management datasets</li>
+    <li><strong>Model Layer</strong>: Trained CatBoost model with feature engineering</li>
+    <li><strong>Application Layer</strong>: Flask-based interactive interface</li>
+    <li><strong>Visualization Layer</strong>: Plotly charts and maps</li>
+</ul>
+
+
+{% endblock %}

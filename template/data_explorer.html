@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1 class="main-title">Data Explorer</h1>
+<p class="subtitle">View and filter the raw dataset</p>
+
+<h2 class="mt-4">Dataset Overview</h2>
+<div class="table-responsive">
+    {{ data_html|safe }}
+</div>
+
+<h2 class="mt-4">Statistical Summary</h2>
+<div class="table-responsive">
+    {{ describe_html|safe }}
+</div>
+
+<h2 class="mt-4">Data Quality Check</h2>
+<div class="row">
+    <div class="col-md-6">
+        <h4>Missing Values:</h4>
+        <div class="table-responsive">
+            {{ missing_html|safe }}
+        </div>
+    </div>
+    <div class="col-md-6">
+        <h4>Data Types:</h4>
+        <div class="table-responsive">
+            {{ dtypes_html|safe }}
+        </div>
+    </div>
+</div>
+
+<h2 class="mt-4">🔧 Interactive Filters</h2>
+<form id="filterForm" class="stForm">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="city">Select City:</label>
+                <select class="form-control" id="city" name="city">
+                    {% for city in cities %}
+                    <option value="{{ city }}">{{ city }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="year">Select Year:</label>
+                <select class="form-control" id="year" name="year">
+                    {% for year in years %}
+                    <option value="{{ year }}">{{ year }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="waste_type">Select Waste Type:</label>
+                <select class="form-control" id="waste_type" name="waste_type">
+                    {% for type in waste_types %}
+                    <option value="{{ type }}">{{ type }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success mt-3">Apply Filter</button>
+</form>
+
+<h2 class="mt-4">Filtered Results: <span id="recordCount"></span> records</h2>
+<div id="filteredResults" class="table-responsive">
+</div>
+
+<script>
+    document.getElementById('filterForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const formData = new FormData(this);
+        fetch('/data_explorer/filter', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                document.getElementById('filteredResults').innerHTML = `<p class="text-danger">${data.error}</p>`;
+                document.getElementById('recordCount').innerText = '0';
+            } else {
+                document.getElementById('filteredResults').innerHTML = data.html;
+                document.getElementById('recordCount').innerText = data.record_count;
+            }
+        })
+        .catch(error => {
+            document.getElementById('filteredResults').innerHTML = `<p class="text-danger">An error occurred: ${error}</p>`;
+            document.getElementById('recordCount').innerText = '0';
+        });
+    });
+</script>
+{% endblock %}

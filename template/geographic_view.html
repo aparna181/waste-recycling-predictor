@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1 class="main-title">Geographic Analysis</h1>
+<p class="subtitle">Explore city-level waste management performance on a map</p>
+
+<h2 class="mt-4">City Performance Overview</h2>
+<div class="row">
+    <div class="col-md-6">
+        <h3>City Performance Metrics</h3>
+        <div class="table-responsive">
+            {{ performance_html|safe }}
+        </div>
+    </div>
+    <div class="col-md-6">
+        <h3>Performance Rankings</h3>
+        <h4>Top Performers (Recycling Rate):</h4>
+        <ul>
+            {% for city in best_cities %}
+            <li><strong>{{ city.City_District }}</strong>: {{ "%.1f"|format(city._2) }}%</li>
+            {% endfor %}
+        </ul>
+        <h4>Most Efficient Municipalities:</h4>
+        <ul>
+            {% for city in efficient_cities %}
+            <li><strong>{{ city.City_District }}</strong>: {{ "%.1f"|format(city._4) }}/10</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<h2 class="mt-4">Regional Waste Patterns</h2>
+<div class="plotly-chart">
+    {{ map_plot|safe }}
+</div>
+{% endblock %}
