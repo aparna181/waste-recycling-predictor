@@ -32,7 +32,7 @@ waste_management/
 ├── templates/
 ├── README.md
 ├── predictions.csv
-└── report.pdf
+
 ```
 ---
 
@@ -148,6 +148,14 @@ The application uses comprehensive waste management data including:
 
 
 ## Deployment
+- Render (for Deployment)
+
+## Live Demo
+```bash
+Access the deployed app here: 
+[Waste Recycling Predictor] (https://waste-recycling-predictor-nzxd.onrender.com)
+
+```
 
 ### **Local Development**
 ```bash
