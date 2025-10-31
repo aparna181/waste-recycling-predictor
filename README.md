@@ -224,8 +224,7 @@ The repository includes a `predictions.csv` file which stores model predictions 
 
 ---
 ## Author
-Aparna Swain
-Data Enthusiast
+Aparna Swain | Data Enthusiast
 
 
 
